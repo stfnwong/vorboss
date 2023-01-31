@@ -1,0 +1,8 @@
+# Ignore swap files 
+*.swp
+*.swo
+
+# Ignore compiled/cache files 
+*.pyc
+*.pyo
+__pycache__
