@@ -1,0 +1,16 @@
+version: "3"
+services:
+  dash_app:
+    build:
+      context: .
+      target: dev
+      dockerfile: Dockerfile
+    container_name: dash_app
+    restart: on-failure
+    environment:
+      - AIRTABLE_API_TOKEN
+    ports:
+      - 8050:8050
+    volumes:
+      - .:/root/
+    command: python pcreations/dash_app.py
